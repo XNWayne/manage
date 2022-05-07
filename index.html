@@ -15,18 +15,10 @@
     <title>Manage landing page</title>
     <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <script src="./js/script.js" defer></script>
+
   </head>
-  <body>
+  <body class="font-body">
     <!--  Navbar  -->
     <nav class="relative container mx-auto p-6">
       <!-- Flex container -->
@@ -35,7 +27,7 @@
           <img src="./images/logo.svg" alt="" />
         </div>
         <!-- Menu items -->
-        <div class="hidden space-x-6 md:flex">
+        <div class="hidden space-x-6 lg:flex">
           <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
           <a href="#" class="hover:text-darkGrayishBlue">Products</a>
           <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
@@ -45,9 +37,26 @@
         <!-- Button -->
         <a
           href=""
-          class="hidden p-3 px-6 text-white font-semibold bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+          class="hidden p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight lg:block"
           >Get Started</a
         >
+
+        <!-- Hamburger Icon -->
+        <button id="menu-btn" class="block hamburger lg:hidden focus:outline-none">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="lg:hidden">
+        <div id="menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+          <a href="">Pricing</a>
+          <a href="">Products</a>
+          <a href="">About Us</a>
+          <a href="">Careers</a>
+          <a href="">Community</a>
+        </div>
       </div>
     </nav>
 
@@ -71,7 +80,7 @@
           <div class="flex justify-center md:justify-start">
             <a
               href=""
-              class="p-3 px-6 text-white font-semibold bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+              class="p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
               >Get Started</a
             >
           </div>
@@ -288,30 +297,98 @@
       <div
         class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
       >
-      <!-- Heading -->
-      <h2 class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
-      Simplify how your team works today
-      </h2>
-      <!-- Button -->
-      <div>
-      <a
+        <!-- Heading -->
+        <h2
+          class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left"
+        >
+          Simplify how your team works today
+        </h2>
+        <!-- Button -->
+        <div>
+          <a
             href=""
             class="p-3 px-6 text-brightRed font-semibold bg-white rounded-full shadow-2xl baseline hover:bg-gray-300"
             >Get Started</a
           >
-          </div>
-    </div>
+        </div>
+      </div>
     </section>
 
-    Simplify how your team works today. Get Started Home Pricing Products About
-    Us Careers Community Privacy Policy Updates in your inbox… Go Copyright
-    2020. All Rights Reserved
+    <!-- Footer -->
+    <footer class="bg-veryDarkBlue">
+      <!-- Flex Container -->
+      <div
+        class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0"
+      >
+        <!-- Logo and Social -->
+        <div
+          class="flex flex-col-reverse items-center justify-between space-y-12 lg:flex-col lg:space-y-0 lg:items-start"
+        >
+        <div class="mx-auto my-6 text-center text-white lg:hidden">
+          Copyright &copy; 2022, All Rights Reserved
+        </div>
+          <!-- Logo -->
+          <div><img src="./images/logo.svg" class="h-8" alt="logo" /></div>
+          <!-- Social -->
+          <div class="flex justify-center space-x-4">
+            <!-- Link 1 -->
+            <a href="#"
+              ><img src="./images/icon-facebook.svg" class="h-8" alt=""
+            /></a>
+             <!-- Link 2 -->
+             <a href="#"
+             ><img src="./images/icon-twitter.svg" class="h-8" alt=""
+           /></a>
+            <!-- Link 3 -->
+            <a href="#"
+              ><img src="./images/icon-instagram.svg" class="h-8" alt=""
+            /></a>
+             <!-- Link 4 -->
+             <a href="#"
+             ><img src="./images/icon-pinterest.svg" class="h-8" alt=""
+           /></a>
+            <!-- Link 5 -->
+            <a href="#"
+              ><img src="./images/icon-youtube.svg" class="h-8" alt=""
+            /></a>
+          </div>
+        </div>
 
-    <div class="attribution">
+        <!-- List  -->
+        <div class="flex justify-around space-x-32">
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="" class="hover:text-brightRed">Home</a>
+            <a href="" class="hover:text-brightRed">Pricing</a>
+            <a href="" class="hover:text-brightRed">Products</a>
+            <a href="" class="hover:text-brightRed">About Us</a>
+          </div>
+
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="" class="hover:text-brightRed">Careers</a>
+            <a href="" class="hover:text-brightRed">Community</a>
+            <a href="" class="hover:text-brightRed">Privacy Policy</a>
+          </div>
+        </div>
+
+        <!-- Input Container -->
+        <div class="flex flex-col justify-between">
+          <form action="">
+            <div class="flex space-x-3">
+              <input type="text" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Updates in your inbox…">
+              <button class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">Go</button>
+            </div>
+          </form>
+          <div class="hidden text-white lg:block">Copyright &copy; 2022, All Rights Reserved</div>
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="text-center text-sm bg-veryDarkBlue text-white pb-14">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-attribution"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#" class="text-attribution">Xander Wayne</a>.
     </div>
   </body>
 </html>
